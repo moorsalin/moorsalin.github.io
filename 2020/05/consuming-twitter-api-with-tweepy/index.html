@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="Moorsalin Munshi" />
+<meta name="description" content="Moorsalin&#39;s Personal Blog." />
+<meta name="keywords" content="blog, tech, python, algorithmic trading" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.71.1" />
+
+<link rel="canonical" href="https://moorsalin.net/2020/05/consuming-twitter-api-with-tweepy/">
+<meta property="og:title" content="Consuming Twitter API With Tweepy" />
+<meta property="og:description" content="Background Twitter is a veritable source of social media data. It is unhindered by the same privacy concerns as Facebook because of its cavalier attitude towards social networking and less intrusive data collection. Twitter has become quite popular amongst journalists since its inception, as well as politicians and other figures with political power. I am interested in the interactions journalists have on Twitter. There are two classes of users, blue checkmarks and non checkmarked." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://moorsalin.net/2020/05/consuming-twitter-api-with-tweepy/" />
+<meta property="article:published_time" content="2020-05-26T19:29:35-04:00" />
+<meta property="article:modified_time" content="2020-05-26T19:29:35-04:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Consuming Twitter API With Tweepy"/>
+<meta name="twitter:description" content="Background Twitter is a veritable source of social media data. It is unhindered by the same privacy concerns as Facebook because of its cavalier attitude towards social networking and less intrusive data collection. Twitter has become quite popular amongst journalists since its inception, as well as politicians and other figures with political power. I am interested in the interactions journalists have on Twitter. There are two classes of users, blue checkmarks and non checkmarked."/>
+
+
+<meta itemprop="name" content="Consuming Twitter API With Tweepy">
+<meta itemprop="description" content="Background Twitter is a veritable source of social media data. It is unhindered by the same privacy concerns as Facebook because of its cavalier attitude towards social networking and less intrusive data collection. Twitter has become quite popular amongst journalists since its inception, as well as politicians and other figures with political power. I am interested in the interactions journalists have on Twitter. There are two classes of users, blue checkmarks and non checkmarked.">
+<meta itemprop="datePublished" content="2020-05-26T19:29:35-04:00" />
+<meta itemprop="dateModified" content="2020-05-26T19:29:35-04:00" />
+<meta itemprop="wordCount" content="391">
+
+
+
+<meta itemprop="keywords" content="twitter," />
+
+<link rel="stylesheet" href="https://moorsalin.net/css/layout.css" />
+
+
+<link rel="stylesheet" href="https://moorsalin.net/css/default-dark.css" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-156082317-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<title>
+
+
+     Consuming Twitter API With Tweepy 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="https://moorsalin.net/">Moorsalin&#39;s Blog</a>
+    </div> 
+
+    
+    
+    <a class="nav-item" href="https://moorsalin.net/posts/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="https://moorsalin.net/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="https://moorsalin.net/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:moorsalin.munshi@gmail.com"><div class="social-link">email</div></a>
+  
+
+  
+  <a href="https://github.com/moorsalin" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+
+  
+  <a href="https://www.linkedin.com/in/moorsalin-munshi-60980b126" target="_blank"><div class="social-link">in</div></a>
+  
+
+</div>
+
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Consuming Twitter API With Tweepy </h1>
+    <div class="content"> <h2 id="background">Background</h2>
+<p>Twitter is a veritable source of social media data. It is unhindered by the same privacy concerns as Facebook because of its cavalier attitude towards social networking and less intrusive data collection. Twitter has become quite popular amongst journalists since its inception, as well as politicians and other figures with political power. I am interested in the interactions journalists have on Twitter. There are two classes of users, blue checkmarks and non checkmarked. Twitter uses the blue checkmark as a status symbol. The overwhelming majority of blue checkmark users are corporations, politicians, and journalists. It mirrors the power structure of U.S. society.</p>
+<p>Twitter has a public facing API with which one could pull data for free, at a free rate. If I assume journalists follow each other on Twitter, I could use the connections of one journalist to find all of them.</p>
+<h2 id="tools">Tools</h2>
+<p>I intend to use <a href="http://docs.tweepy.org/en/latest/index.html">tweepy</a> API wrapper to collect data from Twitter. The following <a href="https://realpython.com/twitter-bot-python-tweepy/#hello-tweepy">tutorial</a> may help as well. Let&rsquo;s get down to business by first looking at what Twitter offers.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f00">import</span> json
+<span style="color:#f00">import</span> tweepy
+<span style="color:#f00">import</span> os
+
+<span style="color:#0f0"># Authenticate to Twitter</span>
+<span style="color:#0f0"># I saved my keys as environment variables</span>
+consumer_key = os.environ[<span style="color:#87ceeb">&#39;TWITTER_CONSUMER_API_KEY&#39;</span>]
+consumer_secret = os.environ[<span style="color:#87ceeb">&#39;TWITTER_CONSUMER_API_SECRET&#39;</span>]
+
+<span style="color:#0f0"># I use OAuth v2 since I am using read-only access</span>
+auth = tweepy.AppAuthHandler(consumer_key, consumer_secret)
+
+<span style="color:#0f0"># Create API object</span>
+api = tweepy.API(auth)
+
+<span style="color:#0f0"># Lets seed the list of members I wish to plug</span>
+seedlist = [<span style="color:#87ceeb">&#34;sashaperigo&#34;</span>,<span style="color:#87ceeb">&#34;hacks4pancakes&#34;</span>,<span style="color:#87ceeb">&#34;StefanEtienne&#34;</span>,<span style="color:#87ceeb">&#34;sarahjeong&#34;</span>,<span style="color:#87ceeb">&#34;katienotopoulos&#34;</span>]
+
+<span style="color:#0f0"># For the time being, lets grab everything we can get</span>
+<span style="color:#f00">for</span> seed in seedlists:
+    seed_user = api.get_user(seed)
+    <span style="color:#f00">with</span> open(f<span style="color:#87ceeb">&#39;{seed_user.screen_name}.json&#39;</span>,<span style="color:#87ceeb">&#39;w&#39;</span>) <span style="color:#f00">as</span> fp:
+        <span style="color:#0f0"># the API provides a convenient _json object which is actually a</span>
+        <span style="color:#0f0"># python dictionary representing the API endpoint </span>
+        <span style="color:#0f0"># https://api.twitter.com/1.1/users/show.json</span>
+        json.dump(obj=seed_user._json,fp=fp)
+    <span style="color:#0f0"># the following will iterate over each seedlist user&#39;s friends</span>
+    <span style="color:#0f0"># and save what Twitter calls the User obj</span>
+    <span style="color:#0f0"># see here https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object</span>
+    friends = [user <span style="color:#f00">for</span> user in api.friends(seed)]
+    <span style="color:#f00">for</span> friend in friends:
+        <span style="color:#f00">with</span> open(f<span style="color:#87ceeb">&#39;{friend.screen_name}.json&#39;</span>,<span style="color:#87ceeb">&#39;w&#39;</span>) <span style="color:#f00">as</span> fp:
+            json.dump(obj=friend._json,fp=f)
+</code></pre></div><h2 id="next-steps">Next Steps</h2>
+<p>Now that I have accumulated some data, I will need to pick it over and keep only the relevant bits. Twitter is simple enough to break down into concepts. The user creates tweets and can friend other users, who in turn can follow that user. I wish to analyze the friend network of journalists in an effort to determine how much overlap there is with other institutions with massive political power.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+            
+<div class="tags">
+  
+    
+      <div class="tag">
+        <a href="https://moorsalin.net/tags/twitter">#twitter</a>
+      </div>
+    
+  
+</div>
+
+    <div class="date"> 2020-05-05 </div>
+    
+  </div>
+</footer>
+
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:moorsalin.munshi@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/moorsalin" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+
+  
+  <a href="https://www.linkedin.com/in/moorsalin-munshi-60980b126" target="_blank"><div class="social-link">LinkedIn</div></a>
+  
+
+  <div class="social-link">
+  <a href="https://moorsalin.net/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright © Moorsalin Munshi 2020. Powered by <a href='https://github.com/gyorb/hugo-dusk'>Hugo Dusk</a> </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+
