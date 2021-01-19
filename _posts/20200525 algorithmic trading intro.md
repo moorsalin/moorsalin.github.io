@@ -3,6 +3,7 @@ title: "Getting Started with Algorithmic Trading"
 date: 2020-05-25T14:08:07-04:00
 type: posts
 tags: ['stocks']
+layout: post
 ---
 
 ## Background

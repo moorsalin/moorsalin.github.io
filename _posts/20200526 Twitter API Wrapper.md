@@ -3,6 +3,7 @@ title: "Consuming Twitter API With Tweepy"
 date: 2020-05-26T19:29:35-04:00
 type: posts
 tags: ['twitter']
+layout: post
 ---
 
 ## Background

@@ -3,6 +3,9 @@ title: "About"
 date: 2020-05-25
 menu: "main"
 weight: 100
+layout: page
+title: About
+permalink: /about/
 ---
 
 ## Who am I

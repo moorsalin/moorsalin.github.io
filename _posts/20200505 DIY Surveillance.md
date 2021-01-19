@@ -3,6 +3,7 @@ title: "DIY Surveillance"
 date: 2020-05-05T17:14:44-04:00
 type: posts
 tags: ['raspberry pi','surveillance','DIY']
+layout: post
 ---
 
 ## Background
