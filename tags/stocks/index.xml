@@ -6,12 +6,8 @@
     <description>Recent content in stocks on Moorsalin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright © Moorsalin Munshi 2020. Powered by &lt;a href=&#39;https://github.com/gyorb/hugo-dusk&#39;&gt;Hugo Dusk&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 25 May 2020 14:08:07 -0400</lastBuildDate>
-    
-	<atom:link href="https://moorsalin.net/tags/stocks/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>Copyright © Moorsalin Munshi 2021. Powered by &lt;a href=&#39;https://github.com/gyorb/hugo-dusk&#39;&gt;Hugo Dusk&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 25 May 2020 14:08:07 -0400</lastBuildDate><atom:link href="https://moorsalin.net/tags/stocks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting Started with Algorithmic Trading</title>
       <link>https://moorsalin.net/2020/05/getting-started-with-algorithmic-trading/</link>
