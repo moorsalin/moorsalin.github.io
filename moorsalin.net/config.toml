@@ -1,6 +1,7 @@
 baseurl = "https://moorsalin.net/"
 title = "Moorsalin's Blog"
-copyright = "Copyright © Moorsalin Munshi 2021. Powered by <a href='https://github.com/gyorb/hugo-dusk'>Hugo Dusk</a>"
+copyright = "Copyright © Moorsalin Munshi 2021."
+
 canonifyurls = true
 languageCode = "en-US"
 #paginate = 3
@@ -40,6 +41,7 @@ SectionPagesMenu = "main"
   url = "/tags/"
 
 [params]
+  poweredby = "Powered by <a href='https://github.com/gyorb/hugo-dusk'>Hugo Dusk</a>"
   github = "moorsalin"
   #gitlab = "moorsalin"
   #twitter = "moorsalin"
