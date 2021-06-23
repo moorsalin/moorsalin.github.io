@@ -1,0 +1,51 @@
+baseurl = "https://moorsalin.net/"
+title = "Moorsalin's Blog"
+copyright = "Copyright © Moorsalin Munshi 2021. Powered by <a href='https://github.com/gyorb/hugo-dusk'>Hugo Dusk</a>"
+canonifyurls = true
+languageCode = "en-US"
+#paginate = 3
+theme = "hugo-dusk"
+
+googleAnalytics = "UA-156082317-1"
+disqusShortname = ""
+
+[author]
+  name = "Moorsalin Munshi"
+
+[params.meta]
+  keywords = "blog, tech, python, algorithmic trading"
+  description = "Moorsalin's Personal Blog."
+
+SectionPagesMenu = "main"
+
+# Configure syntax highlight
+[markup]
+  [markup.highlight]
+    style = "rrt" # dark themes: monokai, api, fruity, native, rrt, swapoff
+
+[Permalinks]
+  # post = "post/:slug"
+  posts = "/:year/:month/:title/"
+
+[[menu.main]]
+  name = "Posts"
+  weight = -120
+  identifier = "post"
+  url = "/posts/"
+
+[[menu.main]]
+  name = "Tags"
+  weight = -110
+  identifier = "tags"
+  url = "/tags/"
+
+[params]
+  github = "moorsalin"
+  #gitlab = "moorsalin"
+  #twitter = "moorsalin"
+  linkedin = "moorsalin-munshi-60980b126"
+  email = "moorsalin.munshi@gmail.com"
+  theme_colors = "default-dark" # uses color css file under static/css/default-dark.css
+  #utterancesRepo="REPO_NAME" # Utterances is enabled when this param is set
+  #utterancesTheme="github-dark" # Default: github-dark
+  #utterancesIssueTerm="pathname" # Default: pathname
