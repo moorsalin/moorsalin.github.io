@@ -6,16 +6,16 @@
     <description>Recent content on Moorsalin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright © Moorsalin Munshi 2021. Powered by &lt;a href=&#39;https://github.com/gyorb/hugo-dusk&#39;&gt;Hugo Dusk&lt;/a&gt;</copyright>
+    <copyright>Copyright © Moorsalin Munshi 2021.</copyright>
     <lastBuildDate>Tue, 26 May 2020 19:29:35 -0400</lastBuildDate><atom:link href="https://moorsalin.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://moorsalin.net/about/</link>
-      <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://moorsalin.net/about/</guid>
-      <description>Who am I My name is Moorsalin Munshi. I am interested in computer security, databases, geopolitics, and stock trading. I have a wide array of interests in addition to the listed items. I hope to get around to writing about my interests in an effort to consolidate my identity.
-What do I do I am currently employed as a Senior HEDIS/QARR analyst at EmblemHealth. In practice, that translates to data analyst.</description>
+      <description>Who am I My name is Moorsalin Munshi. I like to read about geopolitics and reverse engineering as hobbies. I am trying to become a software engineer.
+What do I do I am currently employed as a Senior HEDIS/QARR analyst at EmblemHealth. In practice, that translates to data analyst. I work with health insurance data from multiple vendors. A lot of my work involves reshaping data, analyzing it, and creating narratives supported by the data.</description>
     </item>
     
     <item>
