@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://moorsalin.net/about/</loc>
-    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://moorsalin.net/2020/05/consuming-twitter-api-with-tweepy/</loc>
-    <lastmod>2020-05-26T19:29:35-04:00</lastmod>
+    <loc>https://moorsalin.net/tags/grad-school/</loc>
+    <lastmod>2021-12-23T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://moorsalin.net/2021/12/grad-school-in-review/</loc>
+    <lastmod>2021-12-23T12:00:00-05:00</lastmod>
   </url><url>
     <loc>https://moorsalin.net/</loc>
-    <lastmod>2020-05-26T19:29:35-04:00</lastmod>
+    <lastmod>2021-12-23T12:00:00-05:00</lastmod>
   </url><url>
     <loc>https://moorsalin.net/posts/</loc>
-    <lastmod>2020-05-26T19:29:35-04:00</lastmod>
+    <lastmod>2021-12-23T12:00:00-05:00</lastmod>
   </url><url>
     <loc>https://moorsalin.net/tags/</loc>
+    <lastmod>2021-12-23T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>https://moorsalin.net/2020/05/consuming-twitter-api-with-tweepy/</loc>
     <lastmod>2020-05-26T19:29:35-04:00</lastmod>
   </url><url>
     <loc>https://moorsalin.net/tags/twitter/</loc>
