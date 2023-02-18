@@ -159,6 +159,8 @@ Error message and password prompt
 
 <li>$:/config/RelinkOnRename</li>
 
+<li>$:/config/TimestampDisable</li>
+
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold</li>
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar</li>
@@ -211,6 +213,8 @@ Error message and password prompt
 
 <li>$:/state/edit/references--685527791</li>
 
+<li>$:/state/edit/references--775277387</li>
+
 <li>$:/state/editpreviewtype</li>
 
 <li>$:/state/folded/$:/ControlPanel</li>
@@ -228,6 +232,8 @@ Error message and password prompt
 <li>$:/state/showeditpreview</li>
 
 <li>$:/state/sidebar</li>
+
+<li>$:/state/tab--1498284803</li>
 
 <li>$:/state/tab--1963855381</li>
 
@@ -254,6 +260,8 @@ Error message and password prompt
 <li>$:/StoryList</li>
 
 <li>$:/tags/ViewToolbar</li>
+
+<li>$:/temp/advancedsearch</li>
 
 <li>$:/temp/info-plugin</li>
 
@@ -453,7 +461,9 @@ Error message and password prompt
 
 <li>$:/view</li>
 
-<li>2023-02-17</li>
+<li>2023-02-17 Tesseract OCR</li>
+
+<li>2023-02-17 Writing blog posts with assist from ChatGPT</li>
 
 <li>About</li>
 
@@ -490,8 +500,8 @@ Error message and password prompt
 <div created="20190506012910014" modified="20190506012910014" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-journal">
 <pre>show</pre>
 </div>
-<div created="20190508181518359" modified="20190508181518359" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
-<pre>hide</pre>
+<div created="20190508181518359" modified="20230218014301502" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
+<pre>show</pre>
 </div>
 <div created="20221225041517891" modified="20221225041517891" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/timestamp">
 <pre>show</pre>
@@ -501,6 +511,9 @@ Error message and password prompt
 </div>
 <div created="20190506012632086" modified="20190506012632086" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
+</div>
+<div created="20230218013950432" modified="20230218014041335" title="$:/config/TimestampDisable">
+<pre>no</pre>
 </div>
 <div created="20190428161104385" modified="20190428161104385" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold">
 <pre>show</pre>
@@ -9702,6 +9715,9 @@ About</pre>
 <div created="20190507125653354" modified="20190507125654170" title="$:/state/edit/references--685527791">
 <pre>hide</pre>
 </div>
+<div title="$:/state/edit/references--775277387">
+<pre>hide</pre>
+</div>
 <div created="20190428160502592" modified="20190428160502592" title="$:/state/editpreviewtype">
 <pre>$:/core/ui/EditTemplate/body/preview/output</pre>
 </div>
@@ -9714,11 +9730,11 @@ About</pre>
 <div created="20190428160615354" modified="20221227233558097" title="$:/state/folded/Index">
 <pre>show</pre>
 </div>
-<div created="20221225042234861" modified="20230218012611629" title="$:/state/notebook-sidebar">
+<div created="20221225042234861" modified="20230218014304805" title="$:/state/notebook-sidebar">
 <pre>no</pre>
 </div>
-<div created="20221225174622955" modified="20230218011459550" title="$:/state/notebook-sidebar-section">
-<pre></pre>
+<div created="20221225174622955" modified="20230218014252757" title="$:/state/notebook-sidebar-section">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20221225041742889" modified="20221225041747449" title="$:/state/plugin-info--270617185-$:/themes/tiddlywiki/vanilla">
 <pre>no</pre>
@@ -9729,17 +9745,20 @@ About</pre>
 <div created="20190422025612335" modified="20221225041549298" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
+<div created="20230218014120007" modified="20230218014120007" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+</div>
 <div created="20190422025711383" modified="20221226015535680" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Palette</pre>
 </div>
-<div created="20190428160648401" modified="20221227233526770" title="$:/state/tab--2112689675">
+<div created="20190428160648401" modified="20230218014442156" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
 <div created="20190422025703296" modified="20230208025631718" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Themes</pre>
 </div>
-<div created="20190428160712041" modified="20190507132525402" title="$:/state/tab--959111941">
-<pre>$:/core/ui/ControlPanel/Parsing</pre>
+<div created="20190428160712041" modified="20230218014136103" title="$:/state/tab--959111941">
+<pre>$:/core/ui/ControlPanel/TiddlerFields</pre>
 </div>
 <div created="20190507131143824" modified="20190507131145406" title="$:/state/tab-1163638994">
 <pre>$:/core/ui/MoreSideBar/Plugins/Plugins</pre>
@@ -9762,11 +9781,14 @@ About</pre>
 <div created="20190422030042648" modified="20221225041527330" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
 </div>
-<div created="20230218012711060" list="Index About" modified="20230218012800715" title="$:/StoryList">
+<div created="20230218014406517" list="Index About" modified="20230218014816488" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20190428161023904" list="$:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/fold $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close $:/core/ui/Buttons/fold-bar $:/core/ui/Buttons/fold-others" modified="20190428161240182" title="$:/tags/ViewToolbar">
 <pre></pre>
+</div>
+<div created="20230218014120007" modified="20230218014120007" title="$:/temp/advancedsearch">
+<pre>[!is[system]sort[title]]</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -10943,10 +10965,46 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20190422025716209" modified="20190507132743823" title="$:/view">
 <pre>classic</pre>
 </div>
-<div created="20230218011537584" modified="20230218012753059" tags="Journal" title="2023-02-17">
-<pre>! Blog
-TiddlyWiki is a quine
-Timeless document bound of javascript</pre>
+<div created="20230218011537584" modified="20230218014900104" tags="Journal ChatGPT" title="2023-02-17 Tesseract OCR">
+<pre>The following was generated by ChatGPT
+
+! Using Tesseract OCR and Python for Text Recognition
+
+Optical Character Recognition (OCR) is a technology that allows machines to recognize text in images and convert them into editable text. Tesseract OCR is one of the most widely used OCR engines, and it is open-source and free to use. Python programming language provides a variety of libraries and tools for working with Tesseract OCR, making it easier to integrate this powerful technology into your data processing workflows. In this blog post, we will explore some of the key features and benefits of using Tesseract OCR and Python for text recognition.
+
+!! Installing and Setting Up Tesseract OCR
+Tesseract OCR can be installed on most operating systems, including Windows, macOS, and Linux. It is important to ensure that Tesseract OCR is installed and configured correctly before using it in your Python scripts. There are many resources available online that provide detailed instructions on how to install and set up Tesseract OCR.
+
+!! Using pytesseract Library
+pytesseract is a Python library that provides a wrapper around the Tesseract OCR engine. This library makes it easy to integrate Tesseract OCR into your Python scripts. pytesseract provides a simple and intuitive interface for recognizing text in images and extracting the text. It supports a variety of image formats, including JPEG, PNG, and TIFF.
+
+!! Preprocessing Images for OCR
+Before performing OCR on an image, it is often necessary to preprocess the image to improve the accuracy of the OCR results. Preprocessing techniques can include image scaling, contrast adjustment, noise reduction, and image binarization. Python provides a variety of image processing libraries, such as Pillow and OpenCV, that can be used to perform these preprocessing operations.
+
+!! Handling OCR Output
+Once the text has been recognized, it can be processed and used for a variety of purposes. For example, the recognized text can be stored in a database, used to create searchable PDF documents, or analyzed using natural language processing techniques. Python provides a range of libraries and tools for working with text data, including NLTK and spaCy.
+
+In conclusion, Tesseract OCR and Python provide a powerful combination for text recognition and analysis. By using Tesseract OCR in Python scripts, it is possible to automate text recognition tasks and extract valuable information from images. With the wide range of libraries and tools available in Python, it is easy to preprocess images, handle OCR output, and perform advanced analysis on the recognized text.</pre>
+</div>
+<div created="20230218014312454" modified="20230218014728178" tags="ChatGPT Journal" title="2023-02-17 Writing blog posts with assist from ChatGPT">
+<pre>The following was generated with ChatGPT
+
+! The Impact of ChatGPT on Tech Blogging
+ChatGPT is a large language model developed by OpenAI, designed to provide natural language responses to a wide range of questions and requests. As an AI-powered tool, ChatGPT has the potential to transform the way we interact with information online. In particular, it is likely to have a significant impact on tech blogging, as it provides a new way for readers to engage with tech content and explore new topics. In this blog post, we will explore some of the key ways in which ChatGPT will affect tech blogs.
+
+!! More personalized content
+ChatGPT can generate personalized responses to user queries, based on the user's previous interactions with the model. This means that tech bloggers can use ChatGPT to provide customized content to readers, tailoring the content to their interests and needs. This will help to increase engagement and build stronger relationships with readers.
+
+!! Faster and more accurate research
+One of the key benefits of ChatGPT is its ability to process large amounts of information quickly and accurately. Tech bloggers can use ChatGPT to conduct research and gather information on a wide range of topics, making it easier to produce high-quality content. With ChatGPT, bloggers can spend less time on research and more time creating content that is engaging and informative.
+
+!! Improved user engagement
+ChatGPT provides a more interactive and engaging experience for users, as it allows them to ask questions and get instant answers. This can help to increase user engagement and encourage readers to explore new topics and ideas. With ChatGPT, tech bloggers can provide a more dynamic and engaging experience for their readers, which can help to build a loyal following.
+
+!! New monetization opportunities
+As ChatGPT becomes more widely adopted, there will be new opportunities for tech bloggers to monetize their content. For example, bloggers can use ChatGPT to create custom chatbots for their websites, which can be used to provide customer service or answer common questions. This can help to increase user engagement and generate new revenue streams.
+
+In conclusion, ChatGPT is likely to have a significant impact on tech blogging, providing new opportunities for personalized content, faster research, improved user engagement, and new monetization opportunities. As AI-powered tools continue to evolve and become more widely adopted, tech bloggers will need to adapt and embrace new technologies to stay relevant and competitive in a rapidly changing online landscape.</pre>
 </div>
 <div created="20230218011754727" modified="20230218012548397" title="About">
 <pre>!! Who am I
@@ -10982,7 +11040,7 @@ I graduated from Georgia Tech with a Masters of Science in Computer Science. Thi
 * CS 6238 Secure Computer Systems
 * CS 6515 Intro to Graduate Algorithms</pre>
 </div>
-<div created="20190428160242112" modified="20230218011747804" tags="index" title="Index" type="text/vnd.tiddlywiki">
+<div created="20190428160242112" modified="20230218014224742" tags="index" title="Index" type="text/vnd.tiddlywiki">
 <pre>List posts in order of creation.
 
 [[About]]
