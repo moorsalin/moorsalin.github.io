@@ -463,6 +463,12 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>2020-05-05 DIY Surveillance</li>
+
+<li>2020-05-25 Algo Trading Intro</li>
+
+<li>2020-05-26 Consuming Twitter API With Tweepy</li>
+
 <li>2021-12-23 Grad School in Review</li>
 
 <li>2023-02-17 Tesseract OCR</li>
@@ -9749,7 +9755,7 @@ Portfolio</pre>
 <div created="20221225041742889" modified="20221225041747449" title="$:/state/plugin-info--270617185-$:/themes/tiddlywiki/vanilla">
 <pre>no</pre>
 </div>
-<div created="20190422025144409" modified="20240609160500087" title="$:/state/showeditpreview">
+<div created="20190422025144409" modified="20240610141705237" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20190422025612335" modified="20221225041549298" title="$:/state/sidebar">
@@ -9791,7 +9797,7 @@ Portfolio</pre>
 <div created="20190422030042648" modified="20221225041527330" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
 </div>
-<div created="20240609161523936" list="Index About Portfolio" modified="20240609161523936" title="$:/StoryList">
+<div list="Index About Portfolio" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20190428161023904" list="$:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/fold $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close $:/core/ui/Buttons/fold-bar $:/core/ui/Buttons/fold-others" modified="20190428161240182" title="$:/tags/ViewToolbar">
@@ -9813,7 +9819,7 @@ Portfolio</pre>
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///home/gc/projects/moorsalin.github.io/index.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/oompa/OneDrive/wikis/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9833,7 +9839,7 @@ Portfolio</pre>
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/home/gc/projects/moorsalin.github.io/index.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/oompa/OneDrive/wikis/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9841,7 +9847,7 @@ Portfolio</pre>
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;null&quot;
+            &quot;text&quot;: &quot;file://&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
@@ -10975,21 +10981,107 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20190422025716209" modified="20190507132743823" title="$:/view">
 <pre>classic</pre>
 </div>
-<div created="20240609160307826" modified="20240609160854033" tags="Journal" title="2021-12-23 Grad School in Review">
+<div created="20240610131000504" modified="20240610133414173" tags="Journal" title="2020-05-05 DIY Surveillance">
+<pre>!! Background
+
+I have a home surveillance kit I bought from Costco. It's made by FLIR, who have a major market share in surveillance and optics in the US. The surveillance kit features software for viewing cameras, but its not very good.
+
+!! Hardware
+* Some kind of IP accessible camera, if analog cameras connect to a DVR that can serve the cameras
+!!! SBC
+* NVIDIA Jetson Nano (2019 version)
+Or
+
+* Raspberry Pi 3 or 4
+* Coral TPU accelerator
+
+!! Software
+* NVIDIA Jetson Nano has its own linux distribution packaged by NVIDIA. See https://github.com/dusty-nv/jetson-containers/blob/master/docs/setup.md 
+* Frigate 
+** ghcr.io/blakeblackshear/frigate:0.14.0-beta2
+** use this docker image for GPU accleration ghcr.io/blakeblackshear/frigate:0.14.0-beta2-tensorrt-jp4 </pre>
+</div>
+<div created="20240610130658057" modified="20240610140917713" tags="Journal" title="2020-05-25 Algo Trading Intro">
+<pre>!! Background
+
+In Summer 2019 I took a course on machine learning for trading. In the course, I learned that the general approach to algorithmic trading involves selecting some technical indicators and feeding them into machine learning models. A triggering signal is defined for buying or selling a stock. There are a few brokerages that provide APIs to their customers. I am using Alpaca, which provides API wrappers in Python, as well as Go, C#, and Javascript. Alpaca offers access to market data through their vendor Polygon.
+
+!! Brokerages
+
+There are now a few to choose from
+
+* OANDA
+* Alpaca
+* IBKR
+* Charles Schwab</pre>
+</div>
+<div created="20240610133453893" modified="20240610133934353" tags="Journal" title="2020-05-26 Consuming Twitter API With Tweepy">
+<pre>* who would have thought that twitter would become x.com
+
+!! Background
+Twitter is a veritable source of social media data. It is unhindered by the same privacy concerns as Facebook because of its cavalier attitude towards social networking and less intrusive data collection. Twitter has become quite popular amongst journalists since its inception, as well as politicians and other figures with political power. I am interested in the interactions journalists have on Twitter. There are two classes of users, blue checkmarks and non checkmarked. Twitter uses the blue checkmark as a status symbol. The overwhelming majority of blue checkmark users are corporations, politicians, and journalists. It mirrors the power structure of U.S. society.
+
+Twitter has a public facing API with which one could pull data for free, at a free rate. If I assume journalists follow each other on Twitter, I could use the connections of one journalist to find all of them.
+
+!! Tools
+I intend to use [[tweepy|http://docs.tweepy.org/en/latest/index.html]] API wrapper to collect data from Twitter. The following [[tutorial|https://realpython.com/twitter-bot-python-tweepy/#hello-tweepy]] may help as well. Let's get down to business by first looking at what Twitter offers.
+
+
+```python
+import json
+import tweepy
+import os
+
+# Authenticate to Twitter
+# I saved my keys as environment variables
+consumer_key = os.environ['TWITTER_CONSUMER_API_KEY']
+consumer_secret = os.environ['TWITTER_CONSUMER_API_SECRET']
+
+# I use OAuth v2 since I am using read-only access
+auth = tweepy.AppAuthHandler(consumer_key, consumer_secret)
+
+# Create API object
+api = tweepy.API(auth)
+
+# Lets seed the list of members I wish to plug
+seedlist = [&quot;sashaperigo&quot;,&quot;hacks4pancakes&quot;,&quot;StefanEtienne&quot;,&quot;sarahjeong&quot;,&quot;katienotopoulos&quot;]
+
+# For the time being, lets grab everything we can get
+for seed in seedlists:
+    seed_user = api.get_user(seed)
+    with open(f'{seed_user.screen_name}.json','w') as fp:
+        # the API provides a convenient _json object which is actually a
+        # python dictionary representing the API endpoint 
+        # https://api.twitter.com/1.1/users/show.json
+        json.dump(obj=seed_user._json,fp=fp)
+    # the following will iterate over each seedlist user's friends
+    # and save what Twitter calls the User obj
+    # see here https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object
+    friends = [user for user in api.friends(seed)]
+    for friend in friends:
+        with open(f'{friend.screen_name}.json','w') as fp:
+            json.dump(obj=friend._json,fp=f)
+```
+
+!! Next Steps
+
+Now that I have accumulated some data, I will need to pick it over and keep only the relevant bits. Twitter is simple enough to break down into concepts. The user creates tweets and can friend other users, who in turn can follow that user. I wish to analyze the friend network of journalists in an effort to determine how much overlap there is with other institutions with massive political power.</pre>
+</div>
+<div created="20240609160307826" modified="20240610134501048" tags="Journal" title="2021-12-23 Grad School in Review">
 <pre>Finally, after four long years I have completed my Masters program in computer science. What have I learned? Let us have a look:
 
 !! Courses I completed
 
-* [CS 6262 Network Security](http://www.omscs.gatech.edu/cs-6262-network-security)
-* [CS 6035 Introduction to Information Security](http://www.omscs.gatech.edu/cs-6035-introduction-to-information-security)
-* [CS 6300 Software Development Process](http://www.omscs.gatech.edu/cs-6300-software-development-process)
-* [CS 6250 Computer Networks](http://www.omscs.gatech.edu/cs-6250-computer-networks)
-* [CS 7646 Machine Learning for Trading](http://www.omscs.gatech.edu/cs-7646-machine-learning-trading)
-* [CS 6340 Software Analysis](http://www.omscs.gatech.edu/cs-6340-software-analysis)
-* [CS 6601 Artificial Intelligence](http://www.omscs.gatech.edu/cs-6601-artificial-intelligence)
-* [CS 6400 Database Systems Concepts and Design](http://omscs.gatech.edu/cs-6400-database-systems-concepts-and-design)
-* [CS 6238 Secure Computer Systems](http://omscs.gatech.edu/cs-6238-secure-computer-systems)
-* [CS 6515 Intro to Graduate Algorithms](http://www.omscs.gatech.edu/cs-8803-ga-graduate-algorithms)
+* [[CS 6262 Network Security|https://omscs.gatech.edu/cs-6262-network-security]]
+* [[CS 6035 Introduction to Information Security|https://omscs.gatech.edu/cs-6035-introduction-information-security]]
+* [[CS 6300 Software Development Process|https://omscs.gatech.edu/cs-6300-software-development-process]]
+* [[CS 6250 Computer Networks|https://omscs.gatech.edu/cs-6250-computer-networks]]
+* [[CS 7646 Machine Learning for Trading|https://omscs.gatech.edu/cs-7646-machine-learning-trading]]
+* [[CS 6340 Software Analysis|https://omscs.gatech.edu/cs-6340-software-analysis]]
+* [[CS 6601 Artificial Intelligence|https://omscs.gatech.edu/cs-6601-artificial-intelligence]]
+* [[CS 6400 Database Systems Concepts and Design|https://omscs.gatech.edu/cs-6400-database-systems-concepts-and-design]]
+* [[CS 6238 Secure Computer Systems|https://omscs.gatech.edu/cs-6238-secure-computer-systems]]
+* [[CS 6515 Intro to Graduate Algorithms|https://omscs.gatech.edu/cs-6515-intro-graduate-algorithms]]
 
 I suppose I should give summaries of the above courses. More details will follow, here is what I can remember off the top of my head:
 
@@ -11143,15 +11235,31 @@ I graduated from Georgia Tech with a Masters of Science in Computer Science. Thi
 [[Portfolio]]
 &lt;&lt;list-links &quot;[tag[Journal]reverse[]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20240609135731773" modified="20240609161257368" tags="" title="Portfolio">
-<pre>Some portfolio items
+<div created="20240609135731773" modified="20240610143736497" tags="" title="Portfolio">
+<pre>Descriptions of select projects worked on at Eigen Technologies
 
-* skibiddi toilet
-* gradio app 1
-* gradio app 2
-* mockup of license key app
-* classification framework - this is a cli tool, define cli interafce
-* upgrader - define cli interface, and handler interface</pre>
+!!! License Key App
+*  A web app built with Bootstrap, jQuery, and Django
+* Allow sales team to provision license keys and deploy them to customers cloud deployments where permissible
+* The webapp keeps track of clients with deployments of the company product with an an audit log of actions taken, license keys downloaded, etc.
+
+!!! Classification Framework
+* A web app built using Dagster, BentoML, Scikit-learn, spacy, and Auto-sklearn
+* I didn't build it but I did extend it and make modifications where needed for use with clients
+* Modifications include:
+** integrations with client cloud (aws, azure)
+** update auto-sklearn dependency to make use of NLP feature engineering in Automl 
+* This was a bit clunky to use in practice, lots of cli commands and writing new Dagster ops
+
+!!! Upgrader 
+* Built using python, click, Docker, and shell scripts
+* CLI tool for upgrading deployed software
+* The company product is packaged as docker images. 
+* For each version of the product, there is a diff file containing list of changes to config files needed. This can be partially generated using diff scripts and config files provided by the dev team.
+* When LLMs were added to the product, a new handler was need for LLM config
+* Ideally, this should make upgrading as simple as a CLI command
+* A problem encountered was how to spawn a Docker container from a Docker container without running Docker inside Docker
+** Above is needed to run database migrations from containers</pre>
 </div>
 
 </div>
